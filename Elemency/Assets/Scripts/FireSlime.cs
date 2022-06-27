@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class FireSlime : MonoBehaviour
 {
+    [Header("Attributes")]
     public EnemySlime slimeSO;
     public float slimeHealth;
     public float slimeDamage;
     public float slimeWalkSpeed;
     private Rigidbody2D slimeRB;
 
+    [Header("Patrol AI")]
+    [SerializeField] private bool mustPatrol;
+    [SerializeField] private bool mustTurn;
+
+    public Collider2D wallCollider;
+    public Transform groundCheckPos;
+    public LayerMask groundLayer;
 
     private void Start()
     {
@@ -21,20 +29,36 @@ public class FireSlime : MonoBehaviour
 
     private void Update()
     {
-        slimeRB.velocity = new Vector2(slimeWalkSpeed, 0f);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Platforms")
+        if (mustPatrol)
         {
-            slimeWalkSpeed = -slimeWalkSpeed;
-            FlipSprite();
+            Patrol();
         }
     }
 
-    private void FlipSprite()
+    private void FixedUpdate()
     {
-        transform.localScale = new Vector2(-(transform.localScale.x), 0.2257035f);
+        if(mustPatrol)
+        {
+            // If circle is touching ground, dont flip, else flip
+            mustTurn = !(Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer));
+        }
     }
+    private void Patrol()
+    {
+        if(mustTurn || wallCollider.IsTouchingLayers(groundLayer))
+        {
+            Flip();
+        }
+        slimeRB.velocity = new Vector2(slimeWalkSpeed * Time.fixedDeltaTime, slimeRB.velocity.y);
+    }
+
+    private void Flip()
+    {
+        mustPatrol = false;
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        slimeWalkSpeed *= -1;
+        mustPatrol = true;
+    }
+
+
 }
