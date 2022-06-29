@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Background
   - 
   - 
   - 
@@ -42,9 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3509739075
+    locked: 0
   - name: Platforms
     uniqueID: 1925390933
     locked: 0
   - name: Player
     uniqueID: 2333231597
+    locked: 0
+  - name: Enemy
+    uniqueID: 3996888269
     locked: 0
