@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerJumpSpeed;
     private Vector2 moveInput;
     private Rigidbody2D playerRB;
+    private CapsuleCollider2D playerCollider;
     private Animator playerAnimator;
 
 
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
     }
 
     void Update()
@@ -25,23 +27,32 @@ public class Player : MonoBehaviour
         Run();
         FlipSprite();
     }
+
+    private void FixedUpdate()
+    {
+        IsJumping();
+    }
     void Run()
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * playerMoveSpeed, playerRB.velocity.y);
         playerRB.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
-        playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
-        
+        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            Debug.Log("OnGround");
+            playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+        }
+
     }
 
     void FlipSprite()
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
 
-        if(playerHasHorizontalSpeed)
+        if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2 (Mathf.Sign(playerRB.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(playerRB.velocity.x), 1f);
         }
     }
 
@@ -52,9 +63,22 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if(value.isPressed)
+        if (value.isPressed)
         {
             playerRB.velocity += new Vector2(0f, playerJumpSpeed);
+
+        }
+    }
+
+    void IsJumping()
+    {
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            playerAnimator.SetBool("isJumping", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isJumping", false);
         }
     }
 }
