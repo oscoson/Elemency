@@ -24,12 +24,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Run();
-        FlipSprite();
     }
 
     private void FixedUpdate()
     {
+        Run();
+        FlipSprite();
         IsJumping();
     }
     void Run()
