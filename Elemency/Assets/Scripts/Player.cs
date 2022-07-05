@@ -5,10 +5,21 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [Header("Base Attributes")]
+    [SerializeField] private bool playerAlive = true;
     [SerializeField] private float playerHealth;
     [SerializeField] private float playerDamage;
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
+
+    [Header("Self-Damage Times/Statuses")]
+    [SerializeField] private bool playerHurt = false;
+    [SerializeField] private bool invincibility = false;
+    [SerializeField] private Vector2 hurtSpeed = new Vector2(2.5f, 2.5f);
+    [SerializeField] private float hurtTime = 2.5f;
+
+    [Header("Movement Checks")]
+    public Transform groundCheck;
     private Vector2 moveInput;
     private Rigidbody2D playerRB;
     private CapsuleCollider2D playerCollider;
@@ -28,6 +39,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!playerAlive || playerHurt)
+        {
+            return;
+        }
         Run();
         FlipSprite();
         IsJumping();
@@ -63,8 +78,20 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (value.isPressed)
+        if(!playerAlive || playerHurt)
         {
+            return;
+        }
+        Collider2D groundChecker = Physics2D.OverlapCircle(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
+
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            // First, we check if the player is not touching the ground. If they are, we will return, ignoring the condition below
+            return;
+        }
+        if (value.isPressed && groundChecker)
+        {
+            Debug.Log(groundChecker);
             playerRB.velocity += new Vector2(0f, playerJumpSpeed);
 
         }
@@ -80,5 +107,37 @@ public class Player : MonoBehaviour
         {
             playerAnimator.SetBool("isJumping", false);
         }
+    }
+
+    void takeDamage(float damage)
+    {
+        playerHealth -= damage;
+        if(playerHealth <= 0)
+        {
+            FindObjectOfType<GameManager>().PlayerDeath();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject collisionObject = other.gameObject;
+
+        if(collisionObject.tag == "Enemy" && !invincibility)
+        {
+            takeDamage(10f);
+            playerRB.velocity = hurtSpeed;
+            StartCoroutine(HurtTime(hurtTime));
+
+        }
+    }
+
+    private IEnumerator HurtTime(float waitTime)
+    {
+        //Note: See what happens if you get hit by Two Enemies -> Invincibility on so its okay
+        playerHurt = true;
+        invincibility = true;
+        yield return new WaitForSecondsRealtime(waitTime);
+        invincibility = false;
+        playerHurt = false;
     }
 }
