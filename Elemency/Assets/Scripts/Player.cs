@@ -12,11 +12,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
 
-    [Header("Self-Damage Times/Statuses")]
+    [Header("Damage Taken Times/Statuses")]
     [SerializeField] private bool playerHurt = false;
     [SerializeField] private bool invincibility = false;
     [SerializeField] private Vector2 hurtSpeed = new Vector2(2.5f, 2.5f);
-    [SerializeField] private float hurtTime = 2.5f;
+    [SerializeField] private float hurtTime = 1f;
 
     [Header("Movement Checks")]
     public Transform groundCheck;
@@ -136,6 +136,8 @@ public class Player : MonoBehaviour
         //Note: See what happens if you get hit by Two Enemies -> Invincibility on so its okay
         playerHurt = true;
         invincibility = true;
+        yield return new WaitForSecondsRealtime(waitTime);
+        playerRB.velocity = new Vector2(0f, 0f);
         yield return new WaitForSecondsRealtime(waitTime);
         invincibility = false;
         playerHurt = false;
