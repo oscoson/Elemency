@@ -136,10 +136,12 @@ public class Player : MonoBehaviour
         //Note: See what happens if you get hit by Two Enemies -> Invincibility on so its okay
         playerHurt = true;
         invincibility = true;
+        playerAnimator.SetBool("isHurt", playerHurt);
         yield return new WaitForSecondsRealtime(waitTime);
         playerRB.velocity = new Vector2(0f, 0f);
         yield return new WaitForSecondsRealtime(waitTime);
         invincibility = false;
         playerHurt = false;
+        playerAnimator.SetBool("isHurt", playerHurt);
     }
 }

@@ -21477,10 +21477,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 1088020383199841089, guid: b669abd72e512534592c5192fab9ceba, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -25072,6 +25068,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4946668329548628545, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: hurtTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946668329548628545, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: hurtSpeed.x
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4946668329548628551, guid: 573ea462b38226648954c21f42f58858, type: 3}
       propertyPath: m_RootOrder
       value: 4

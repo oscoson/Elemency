@@ -140,8 +140,8 @@ MonoBehaviour:
   playerJumpSpeed: 10
   playerHurt: 0
   invincibility: 0
-  hurtSpeed: {x: 2.5, y: 5}
-  hurtTime: 1
+  hurtSpeed: {x: 1.5, y: 5}
+  hurtTime: 0.5
   groundCheck: {fileID: 729621000}
 --- !u!70 &4946668329548628547
 CapsuleCollider2D:
