@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!playerAlive || playerHurt)
+        if (!playerAlive || playerHurt)
         {
             return;
         }
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if(!playerAlive || playerHurt)
+        if (!playerAlive || playerHurt)
         {
             return;
         }
@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
     void takeDamage(float damage)
     {
         playerHealth -= damage;
-        if(playerHealth <= 0)
+        if (playerHealth <= 0)
         {
             FindObjectOfType<GameManager>().PlayerDeath();
         }
@@ -123,7 +123,19 @@ public class Player : MonoBehaviour
     {
         GameObject collisionObject = other.gameObject;
 
-        if(collisionObject.tag == "Enemy" && !invincibility)
+        if (collisionObject.tag == "Enemy" && !invincibility)
+        {
+            takeDamage(10f);
+            playerRB.velocity = hurtSpeed;
+            StartCoroutine(HurtTime(hurtTime));
+
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        GameObject collisionObject = other.gameObject;
+        if (collisionObject.tag == "Enemy" && !invincibility)
         {
             takeDamage(10f);
             playerRB.velocity = hurtSpeed;
@@ -141,8 +153,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitTime);
         playerRB.velocity = new Vector2(0f, 0f);
         yield return new WaitForSecondsRealtime(waitTime);
-        invincibility = false;
         playerHurt = false;
         playerAnimator.SetBool("isHurt", playerHurt);
+        yield return new WaitForSecondsRealtime(waitTime);
+        invincibility = false;
     }
 }
