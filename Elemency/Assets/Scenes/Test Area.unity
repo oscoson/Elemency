@@ -25068,6 +25068,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4946668329548628545, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: playerJumpSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946668329548628548, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4946668329548628551, guid: 573ea462b38226648954c21f42f58858, type: 3}
       propertyPath: m_RootOrder
       value: 4

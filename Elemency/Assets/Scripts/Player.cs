@@ -99,7 +99,8 @@ public class Player : MonoBehaviour
 
     void IsJumping()
     {
-        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        Collider2D groundChecker = Physics2D.OverlapCircle(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
+        if (!groundChecker)
         {
             playerAnimator.SetBool("isJumping", true);
         }
