@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     [Header("Base Attributes")]
     [SerializeField] private bool playerAlive = true;
-    [SerializeField] private float playerHealth;
+    public float maxHealth;
+    public float playerHealth;
     [SerializeField] private float playerDamage;
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<CapsuleCollider2D>();
+        maxHealth = playerHealth;
     }
 
     void Update()

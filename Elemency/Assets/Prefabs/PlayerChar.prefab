@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4946668329548628544}
   - component: {fileID: 4946668329548628546}
   m_Layer: 3
-  m_Name: Player
+  m_Name: PlayerChar
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAlive: 1
+  maxHealth: 0
   playerHealth: 100
   playerDamage: 20
   playerMoveSpeed: 10
