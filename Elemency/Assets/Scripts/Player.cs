@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
         bool playerHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            Debug.Log("OnGround");
             playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
         }
 
@@ -93,7 +92,6 @@ public class Player : MonoBehaviour
         }
         if (value.isPressed && groundChecker)
         {
-            Debug.Log(groundChecker);
             playerRB.velocity += new Vector2(0f, playerJumpSpeed);
 
         }
