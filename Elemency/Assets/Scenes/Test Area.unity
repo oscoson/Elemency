@@ -21815,6 +21815,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b669abd72e512534592c5192fab9ceba, type: 3}
+--- !u!1 &1474627156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474627157}
+  m_Layer: 3
+  m_Name: MagicSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474627157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474627156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.77, y: -0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852431643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541350266
 GameObject:
   m_ObjectHideFlags: 3
@@ -25658,6 +25689,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4946668329548628545, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: magicSpawn
+      value: 
+      objectReference: {fileID: 1474627157}
+    - target: {fileID: 4946668329548628545, guid: 573ea462b38226648954c21f42f58858, type: 3}
+      propertyPath: elementalBalls.Array.data[0]
+      value: 
+      objectReference: {fileID: 4390608783505234728, guid: 02c708e340a62f34da75eb27e0142026, type: 3}
     - target: {fileID: 4946668329548628551, guid: 573ea462b38226648954c21f42f58858, type: 3}
       propertyPath: m_RootOrder
       value: 4

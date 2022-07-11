@@ -13,14 +13,20 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
 
+    [Header("Magic")]
+    public float magicPower = 40f;
+    [SerializeField] private GameObject[] elementalBalls = new GameObject[1];
+    [SerializeField] private int currentMagicIndex = 0;
+
     [Header("Damage Taken Times/Statuses")]
     [SerializeField] private bool playerHurt = false;
     [SerializeField] private bool invincibility = false;
     [SerializeField] private Vector2 hurtSpeed = new Vector2(2.5f, 2.5f);
     [SerializeField] private float hurtTime = 1f;
 
-    [Header("Movement Checks")]
+    [Header("Transform Checks/Spawns")]
     public Transform groundCheck;
+    public Transform magicSpawn;
     private Vector2 moveInput;
     private Rigidbody2D playerRB;
     private CapsuleCollider2D playerCollider;
@@ -70,6 +76,17 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Sign(playerRB.velocity.x), 1f);
         }
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (!playerAlive || playerHurt)
+        {
+            return;
+        }
+
+        Instantiate(elementalBalls[currentMagicIndex], magicSpawn.position, transform.rotation);
+
     }
 
     void OnMove(InputValue value)
