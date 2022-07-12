@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealthBar : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealthBar : MonoBehaviour
     public Image secondaryHealthBar;
     public float currentHealth;
     public float maxHealth;
+    [SerializeField] private TextMeshProUGUI text;
     private Player player;
 
     private void Start()
@@ -22,6 +24,7 @@ public class PlayerHealthBar : MonoBehaviour
         currentHealth = player.playerHealth;
         maxHealth = player.maxHealth;
         healthBar.fillAmount = currentHealth / maxHealth;
+        text.text = currentHealth.ToString() + "/" + maxHealth.ToString();
 
     }
 
