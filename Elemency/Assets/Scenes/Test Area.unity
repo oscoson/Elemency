@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.12
+      value: -9.119979
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.41
+      value: 6.4100256
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_LocalRotation.z
@@ -572,7 +572,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

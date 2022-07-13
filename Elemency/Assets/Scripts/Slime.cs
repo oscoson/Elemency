@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSlime : MonoBehaviour
+public class Slime : MonoBehaviour
 {
     [Header("Attributes")]
     public EnemySlime slimeSO;
