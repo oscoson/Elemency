@@ -24,12 +24,19 @@ public class PlayerHealthBar : MonoBehaviour
         currentHealth = player.playerHealth;
         maxHealth = player.maxHealth;
         healthBar.fillAmount = currentHealth / maxHealth;
-        text.text = Mathf.Round((currentHealth * 100.0f) * 0.01f).ToString() + "/" + maxHealth.ToString();
 
     }
 
     private void FixedUpdate()
     {
+        if(currentHealth >= 0.6)
+        {
+            text.text = Mathf.Round((currentHealth * 10.0f) * 0.1f).ToString() + "/" + maxHealth.ToString();
+        }
+        else
+        {
+            text.text = ((currentHealth * 10.0f) * 0.1f).ToString() + "/" + maxHealth.ToString();
+        }
         if (secondaryHealthBar.fillAmount > healthBar.fillAmount)
         {
             secondaryHealthBar.fillAmount -= 0.0035f;
