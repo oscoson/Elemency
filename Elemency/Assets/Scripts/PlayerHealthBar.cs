@@ -24,7 +24,7 @@ public class PlayerHealthBar : MonoBehaviour
         currentHealth = player.playerHealth;
         maxHealth = player.maxHealth;
         healthBar.fillAmount = currentHealth / maxHealth;
-        text.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+        text.text = Mathf.Round((currentHealth * 100.0f) * 0.01f).ToString() + "/" + maxHealth.ToString();
 
     }
 
@@ -32,7 +32,7 @@ public class PlayerHealthBar : MonoBehaviour
     {
         if (secondaryHealthBar.fillAmount > healthBar.fillAmount)
         {
-            secondaryHealthBar.fillAmount -= 0.0025f;
+            secondaryHealthBar.fillAmount -= 0.0035f;
         }
     }
 }

@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool invincibility = false;
     [SerializeField] private Vector2 hurtSpeed = new Vector2(2.5f, 2.5f);
     [SerializeField] private float hurtTime = 1f;
+    [SerializeField] private float burnDamage = 0.1f;
 
     [Header("Transform Checks/Spawns")]
     public Transform groundCheck;
@@ -50,6 +51,10 @@ public class Player : MonoBehaviour
         if (!playerAlive || playerHurt)
         {
             return;
+        }
+        if (playerAnimator.GetBool("isBurning"))
+        {
+            takeDamage(burnDamage);
         }
         Run();
         FlipSprite();
@@ -133,6 +138,26 @@ public class Player : MonoBehaviour
         if (playerHealth <= 0)
         {
             FindObjectOfType<GameManager>().PlayerDeath();
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject collisionObject = other.gameObject;
+
+        if (collisionObject.tag == "Hazard")
+        {
+            playerAnimator.SetBool("isBurning", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        GameObject collisionObject = other.gameObject;
+        if (collisionObject.tag == "Hazard")
+        {
+            playerAnimator.SetBool("isBurning", false);
         }
     }
 
