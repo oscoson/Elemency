@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - FireMagic
   - Hazard
+  - WaterMagic
+  - AirMagic
   layers:
   - Default
   - TransparentFX

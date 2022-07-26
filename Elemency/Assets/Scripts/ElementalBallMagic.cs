@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallMagic : MonoBehaviour
+public class ElementalBallMagic : MonoBehaviour
 {
     [Header("Attributes")]
     public ElementalBall elementalBallSO;
