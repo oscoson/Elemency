@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9911bbff4246b4289c3d8d74700dda, type: 3}
   m_Name: WaterBall
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 15

@@ -12,10 +12,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerDamage;
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
+    private PlayerInput playerInputController;
 
     [Header("Magic")]
     public float magicPower = 40f;
-    [SerializeField] private GameObject[] elementalBalls = new GameObject[1];
+    [SerializeField] private GameObject[] elementalBalls = new GameObject[4];
     [SerializeField] private int currentMagicIndex = 0;
 
     [Header("Damage Taken Times/Statuses")]
@@ -34,16 +35,23 @@ public class Player : MonoBehaviour
     private Animator playerAnimator;
 
 
+    private void Awake()
+    {
+        playerInputController = GetComponent<PlayerInput>();
+    }
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<CapsuleCollider2D>();
         maxHealth = playerHealth;
+
+
     }
 
     void Update()
     {
+
     }
 
     private void FixedUpdate()
@@ -119,6 +127,36 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnChangeMagic(InputValue index)
+    {
+
+        if (Keyboard.current[Key.C].isPressed)
+        {
+            Debug.Log("C");
+            if (currentMagicIndex == 0)
+            {
+                currentMagicIndex = elementalBalls.Length - 1;
+            }
+            else
+            {
+                currentMagicIndex -= 1;
+            }
+        }
+        else if (Keyboard.current[Key.V].isPressed)
+        {
+            Debug.Log("V");
+            if (currentMagicIndex == elementalBalls.Length - 1)
+            {
+                currentMagicIndex = 0;
+            }
+            else
+            {
+                currentMagicIndex += 1;
+            }
+        }
+    }
+
+
     void IsJumping()
     {
         Collider2D groundChecker = Physics2D.OverlapCircle(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
@@ -140,7 +178,6 @@ public class Player : MonoBehaviour
             FindObjectOfType<GameManager>().PlayerDeath();
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -80,7 +80,7 @@ public class Slime : MonoBehaviour
         }
         else if(collisionObject.tag == "WaterMagic")
         {
-            takeDamage(player.magicPower * 2);
+            takeDamage(player.magicPower * 1.5f);
         }
     }
 
