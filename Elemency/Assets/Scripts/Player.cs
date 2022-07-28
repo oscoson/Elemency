@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [Header("Magic")]
     public float magicPower = 40f;
     [SerializeField] private GameObject[] elementalBalls = new GameObject[4];
-    [SerializeField] private int currentMagicIndex = 0;
+    public int currentMagicIndex = 0;
 
     [Header("Damage Taken Times/Statuses")]
     [SerializeField] private bool playerHurt = false;
@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
     private CapsuleCollider2D playerCollider;
     private Animator playerAnimator;
 
+    [Header("Misc")]
+    private MagicIconSwitch iconSwitch;
+
 
     private void Awake()
     {
@@ -45,7 +48,7 @@ public class Player : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<CapsuleCollider2D>();
         maxHealth = playerHealth;
-
+        iconSwitch = FindObjectOfType<MagicIconSwitch>();
 
     }
 
@@ -154,6 +157,7 @@ public class Player : MonoBehaviour
                 currentMagicIndex += 1;
             }
         }
+        iconSwitch.IconChange(currentMagicIndex);
     }
 
 

@@ -140,9 +140,9 @@ TextureImporter:
       name: Elemancy Icons_1
       rect:
         serializedVersion: 2
-        x: 101
+        x: 96
         y: 96
-        width: 22
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
