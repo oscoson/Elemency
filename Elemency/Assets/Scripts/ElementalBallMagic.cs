@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallMagic : MonoBehaviour
+public class ElementalBallMagic : MonoBehaviour
 {
     [Header("Attributes")]
     public ElementalBall elementalBallSO;
+    [SerializeField] private int destroyTime = 5;
     private Rigidbody2D magicRB;
     private Player player;
     private float xSpeed;
@@ -15,6 +16,7 @@ public class FireBallMagic : MonoBehaviour
         player = FindObjectOfType<Player>();
         xSpeed = player.transform.localScale.x * elementalBallSO.speed;
         transform.localScale = new Vector2(player.GetComponent<Transform>().localScale.x, 1f);
+        StartCoroutine(DestructionTime(destroyTime));
     }
 
 
@@ -25,6 +27,12 @@ public class FireBallMagic : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        Destroy(gameObject);
+    }
+
+    private IEnumerator DestructionTime(int waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
         Destroy(gameObject);
     }
 }

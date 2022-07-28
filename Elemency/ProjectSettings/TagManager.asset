@@ -7,6 +7,9 @@ TagManager:
   - Platforms
   - Enemy
   - FireMagic
+  - Hazard
+  - WaterMagic
+  - AirMagic
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - Background
   - Enemy
   - Magic
-  - 
+  - Hazard
   - 
   - 
   - 
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2333231597
+    locked: 0
+  - name: Hazard
+    uniqueID: 3773348435
     locked: 0
   - name: Enemy
     uniqueID: 3996888269

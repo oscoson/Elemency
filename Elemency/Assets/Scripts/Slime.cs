@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSlime : MonoBehaviour
+public class Slime : MonoBehaviour
 {
     [Header("Attributes")]
     public EnemySlime slimeSO;
@@ -80,7 +80,7 @@ public class FireSlime : MonoBehaviour
         }
         else if(collisionObject.tag == "WaterMagic")
         {
-            takeDamage(player.magicPower * 2);
+            takeDamage(player.magicPower * 1.5f);
         }
     }
 
