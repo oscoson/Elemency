@@ -8,4 +8,5 @@ public class EnemySlime : ScriptableObject
     public float health;
     public float walkSpeed;
     public float damage;
+    public string slimeType;
 }

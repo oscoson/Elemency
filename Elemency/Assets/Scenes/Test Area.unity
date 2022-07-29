@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Slime (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1088020383199841089, guid: b669abd72e512534592c5192fab9ceba, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1088020383199841092, guid: b669abd72e512534592c5192fab9ceba, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -22214,7 +22210,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.9280405
+      m_AnimationSpeed: 5.067533
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -37, y: -5, z: 0}
@@ -22223,7 +22219,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.839325
+      m_AnimationSpeed: 5.8657837
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -36, y: -5, z: 0}
@@ -22232,7 +22228,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.684574
+      m_AnimationSpeed: 5.7210684
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -30, y: -5, z: 0}
@@ -27293,3 +27289,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573ea462b38226648954c21f42f58858, type: 3}
+--- !u!1001 &7039065740918049004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1159985518358361610, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: slime
+      value: 
+      objectReference: {fileID: 9128722328806996944}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.657
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.576
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288805, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233913407948288862, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+      propertyPath: m_Name
+      value: Water Slime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+--- !u!114 &9128722328806996944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5784004274798907706, guid: 22d4480670102fb46b7a341141a66134, type: 3}
+  m_PrefabInstance: {fileID: 7039065740918049004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e9c68aaee011948860bfa73e2a2011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
