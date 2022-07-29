@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slime : MonoBehaviour
+public class BlueSlime : MonoBehaviour
 {
-    //FireSlime Script
     [Header("Attributes")]
-    public EnemySlime fireSlimeSO;
+    public EnemySlime blueSlimeSO;
     public float slimeHealth;
     public float slimeDamage;
     public float slimeWalkSpeed;
@@ -24,9 +23,9 @@ public class Slime : MonoBehaviour
     private void Start()
     {
         slimeRB = GetComponent<Rigidbody2D>();
-        slimeHealth = fireSlimeSO.health;
-        slimeDamage = fireSlimeSO.damage;
-        slimeWalkSpeed = fireSlimeSO.walkSpeed;
+        slimeHealth = blueSlimeSO.health;
+        slimeDamage = blueSlimeSO.damage;
+        slimeWalkSpeed = blueSlimeSO.walkSpeed;
         player = FindObjectOfType<Player>();
     }
 
@@ -77,13 +76,11 @@ public class Slime : MonoBehaviour
         GameObject collisionObject = other.gameObject;
         if(collisionObject.tag == "FireMagic")
         {
-            takeDamage(player.magicPower * 0.5f);
+            takeDamage(player.magicPower * 0.25f);
         }
         else if(collisionObject.tag == "WaterMagic")
         {
-            takeDamage(player.magicPower * 1.5f);
+            takeDamage(player.magicPower * 0.5f);
         }
     }
-
-
 }
