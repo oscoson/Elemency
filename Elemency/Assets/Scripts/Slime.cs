@@ -75,32 +75,58 @@ public class Slime : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         GameObject collisionObject = other.gameObject;
-        if(collisionObject.tag == "FireMagic")
+        switch(collisionObject.tag)
         {
-            switch(slimeSO.slimeType)
-            {
-                case "FireSlime":
-                    takeDamage(player.magicPower * 0.5f);
-                    break;
+            case "FireMagic":
+                switch(slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
 
-                case "WaterSlime":
-                    takeDamage(player.magicPower * 0.25f);
-                    break;
-            }
-        }
-        else if(collisionObject.tag == "WaterMagic")
-        {
-            switch(slimeSO.slimeType)
-            {
-                case "FireSlime":
-                    takeDamage(player.magicPower * 1.5f);
-                    break;
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+                }
+                break;
 
-                case "WaterSlime":
-                    takeDamage(player.magicPower * 0.5f);
-                    break;
-            }          
+            case "WaterMagic":
+                switch(slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+                }
+                break;
+            
+            case "AirMagic":
+                switch(slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
+                }
+                break;
         }
+
+
     }
 
 
