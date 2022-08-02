@@ -21,6 +21,9 @@ public class Slime : MonoBehaviour
     public LayerMask groundLayer;
     private Player player;
 
+    [Header("Effects")]
+    [SerializeField] private ParticleSystem potencyBurst;
+
     private void Start()
     {
         slimeRB = GetComponent<Rigidbody2D>();
@@ -69,6 +72,7 @@ public class Slime : MonoBehaviour
         slimeHealth -= damage;
         if(slimeHealth <= 0)
         {
+            Instantiate(potencyBurst, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public float magicPower = 40f;
     [SerializeField] private GameObject[] elementalBalls = new GameObject[4];
     public int currentMagicIndex = 0;
+    public int potencyAmount;
 
     [Header("Damage Taken Times/Statuses")]
     [SerializeField] private bool playerHurt = false;
@@ -73,8 +74,7 @@ public class Player : MonoBehaviour
     }
     void Run()
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * playerMoveSpeed, playerRB.velocity.y);
-        playerRB.velocity = playerVelocity;
+        playerRB.velocity = new Vector2(moveInput.x * playerMoveSpeed, playerRB.velocity.y);
 
         bool playerHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))

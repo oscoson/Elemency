@@ -616,3 +616,4 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  potencyBurst: {fileID: 8720471837675972744, guid: ed081c54d46bc0e49a232f77143ce028, type: 3}
