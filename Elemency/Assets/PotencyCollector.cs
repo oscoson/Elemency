@@ -30,5 +30,12 @@ public class PotencyCollector : MonoBehaviour
             particles[i] = oneParticle;
         }
         potency.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
+        StartCoroutine(DestroyParticleObject(10f));
+    }
+
+    private IEnumerator DestroyParticleObject(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        Destroy(gameObject);
     }
 }
