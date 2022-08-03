@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerDamage;
     [SerializeField] private float playerMoveSpeed;
     [SerializeField] private float playerJumpSpeed;
+    public float playerFireRate;
     private PlayerInput playerInputController;
 
     [Header("Magic")]
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     [Header("Damage Taken Times/Statuses")]
     [SerializeField] private bool playerHurt = false;
     [SerializeField] private bool invincibility = false;
+    [SerializeField] private bool canFire = true;
     [SerializeField] private Vector2 hurtSpeed = new Vector2(2.5f, 2.5f);
     [SerializeField] private float hurtTime = 1f;
     [SerializeField] private float burnDamage = 0.1f;
@@ -96,12 +98,12 @@ public class Player : MonoBehaviour
 
     void OnFire(InputValue value)
     {
-        if (!playerAlive || playerHurt)
+        if (!playerAlive || playerHurt || !canFire)
         {
             return;
         }
-
         Instantiate(elementalBalls[currentMagicIndex], magicSpawn.position, transform.rotation);
+        StartCoroutine(bulletFireRate(playerFireRate));
 
     }
 
@@ -240,5 +242,13 @@ public class Player : MonoBehaviour
         playerAnimator.SetBool("isHurt", playerHurt);
         yield return new WaitForSecondsRealtime(waitTime);
         invincibility = false;
+    }
+    
+    private IEnumerator bulletFireRate(float waitTime)
+    {
+        canFire = false;
+        yield return new WaitForSecondsRealtime(waitTime);
+        canFire = true;
+
     }
 }

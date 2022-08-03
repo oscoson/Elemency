@@ -171,13 +171,16 @@ MonoBehaviour:
   playerDamage: 20
   playerMoveSpeed: 10
   playerJumpSpeed: 15
+  playerFireRate: 1
   magicPower: 40
   elementalBalls:
   - {fileID: 4390608783505234728, guid: 02c708e340a62f34da75eb27e0142026, type: 3}
   - {fileID: 5480066171527876444, guid: ac4271cc254f0b34fb240e9cd3e5ae3f, type: 3}
   currentMagicIndex: 0
+  potencyAmount: 0
   playerHurt: 0
   invincibility: 0
+  canFire: 1
   hurtSpeed: {x: 1.5, y: 5}
   hurtTime: 0.5
   burnDamage: 0.5
