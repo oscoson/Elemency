@@ -43,7 +43,7 @@ ParticleSystemForceField:
   m_Parameters:
     m_Shape: 3
     m_StartRange: 0
-    m_EndRange: 14.099688
+    m_EndRange: 15
     m_Length: 1
     m_GravityFocus: 0
     m_RotationRandomness: {x: 0, y: 0}
@@ -209,7 +209,7 @@ ParticleSystemForceField:
     m_GravityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 35
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -262,7 +262,7 @@ ParticleSystemForceField:
     m_RotationSpeedCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 30.8
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -368,7 +368,7 @@ ParticleSystemForceField:
     m_DragCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 7.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -597,5 +597,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.55, y: 1}
   m_EdgeRadius: 0

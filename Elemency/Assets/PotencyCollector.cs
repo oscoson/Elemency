@@ -21,16 +21,15 @@ public class PotencyCollector : MonoBehaviour
     {
         int triggeredParticles = potency.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
 
-
         for (int i = 0; i < triggeredParticles; i++)
         {
             player.potencyAmount++;
             ParticleSystem.Particle oneParticle = particles[i];
-            oneParticle.remainingLifetime = 0;
+            oneParticle.remainingLifetime = 0f;
             particles[i] = oneParticle;
         }
         potency.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
-        StartCoroutine(DestroyParticleObject(10f));
+        StartCoroutine(DestroyParticleObject(7.5f));
     }
 
     private IEnumerator DestroyParticleObject(float waitTime)
