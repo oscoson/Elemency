@@ -171,7 +171,7 @@ MonoBehaviour:
   playerDamage: 20
   playerMoveSpeed: 10
   playerJumpSpeed: 15
-  playerFireRate: 1
+  playerFireRate: 0.2
   magicPower: 40
   elementalBalls:
   - {fileID: 4390608783505234728, guid: 02c708e340a62f34da75eb27e0142026, type: 3}
