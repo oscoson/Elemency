@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Platform Edge Rule Tile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: -1445776044, guid: 325c09689fc4a004d9ff810003183b1e, type: 3}
+  m_DefaultSprite: {fileID: -992267499, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -1445776044, guid: 325c09689fc4a004d9ff810003183b1e, type: 3}
+    - {fileID: -992267499, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
-    - {fileID: -1015362879, guid: 325c09689fc4a004d9ff810003183b1e, type: 3}
+    - {fileID: 1688240475, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
