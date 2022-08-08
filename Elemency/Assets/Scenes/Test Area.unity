@@ -21865,8 +21865,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 0.5
-  m_YDamping: 0.5
+  m_XDamping: 1.6
+  m_YDamping: 1.6
   m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -21877,7 +21877,7 @@ MonoBehaviour:
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.2
-  m_SoftZoneHeight: 0.2
+  m_SoftZoneHeight: 0.36
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -22225,7 +22225,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.2959847
+      m_AnimationSpeed: 5.2631974
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -37, y: -5, z: 0}
@@ -22234,7 +22234,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.90158
+      m_AnimationSpeed: 5.6459284
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -36, y: -5, z: 0}
@@ -22243,7 +22243,7 @@ Tilemap:
       - {fileID: -1000780191, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: -1527860268, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
       - {fileID: 33277588, guid: f0c103591bad4e44f8e1d4d96459325e, type: 3}
-      m_AnimationSpeed: 5.594388
+      m_AnimationSpeed: 5.3339496
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -30, y: -5, z: 0}
