@@ -176,6 +176,7 @@ MonoBehaviour:
   elementalBalls:
   - {fileID: 4390608783505234728, guid: 02c708e340a62f34da75eb27e0142026, type: 3}
   - {fileID: 5480066171527876444, guid: ac4271cc254f0b34fb240e9cd3e5ae3f, type: 3}
+  - {fileID: 7252624711216383638, guid: 0c9e53408fe3ff6408b644c817cd4a95, type: 3}
   currentMagicIndex: 0
   potencyAmount: 0
   playerHurt: 0
