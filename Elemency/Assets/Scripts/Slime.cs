@@ -18,7 +18,9 @@ public class Slime : MonoBehaviour
 
     public Collider2D wallCollider;
     public Transform groundCheckPos;
-    public LayerMask groundLayer;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask enemyLayer;
+
     private Player player;
 
     [Header("Effects")]
@@ -52,7 +54,7 @@ public class Slime : MonoBehaviour
     
     private void Patrol()
     {
-        if (mustTurn || wallCollider.IsTouchingLayers(groundLayer))
+        if (mustTurn || wallCollider.IsTouchingLayers(groundLayer) || wallCollider.IsTouchingLayers(enemyLayer))
         {
             Flip();
         }
