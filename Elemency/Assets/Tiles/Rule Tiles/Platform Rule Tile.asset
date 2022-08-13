@@ -201,10 +201,27 @@ MonoBehaviour:
     - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
     - {fileID: -1237305218, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
     - {fileID: 469444140, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1682809905, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: -448592730, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: -47532725, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 811874860, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: -860136646, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
+    - {fileID: 1686101581, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
-    m_PerlinScale: 0.5
+    m_PerlinScale: 0.727
     m_Output: 1
     m_ColliderType: 1
     m_RandomTransform: 0
@@ -214,7 +231,7 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0, y: -1, z: 0}
     - {x: -1, y: 0, z: 0}
-    m_RuleTransform: 0
+    m_RuleTransform: 1
   - m_Id: 9
     m_Sprites:
     - {fileID: -1153310354, guid: aa516b6b7db0ea946a7f1ba2b51c2b0a, type: 3}

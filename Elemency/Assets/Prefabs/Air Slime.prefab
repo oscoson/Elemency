@@ -429,8 +429,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4594192777620493862}
   - component: {fileID: 4594192777620493863}
-  - component: {fileID: 4594192777620493856}
   - component: {fileID: 4594192777620493857}
+  - component: {fileID: 4594192777620493856}
   - component: {fileID: 4594192777620493858}
   - component: {fileID: 4594192777620493859}
   - component: {fileID: 4594192777620493916}
@@ -510,26 +510,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4594192777620493856
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4594192777620493917}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e220581c184585449a48a69c75a0d5be, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4594192777620493857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +537,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   potencyBurst: {fileID: 8720471837675972744, guid: ed081c54d46bc0e49a232f77143ce028, type: 3}
+--- !u!95 &4594192777620493856
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594192777620493917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e220581c184585449a48a69c75a0d5be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &4594192777620493858
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -429,11 +429,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2233913407948288805}
   - component: {fileID: 2233913407948288804}
+  - component: {fileID: 5784004274798907706}
   - component: {fileID: 2233913407948288803}
   - component: {fileID: 2233913407948288801}
   - component: {fileID: 2233913407948288800}
   - component: {fileID: 2233913407948288863}
-  - component: {fileID: 5784004274798907706}
   m_Layer: 8
   m_Name: Water Slime
   m_TagString: Enemy
@@ -510,6 +510,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5784004274798907706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233913407948288862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e9c68aaee011948860bfa73e2a2011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slimeSO: {fileID: 11400000, guid: 09509c2d8a7565f4c9c18f161ed67eba, type: 2}
+  slimeHealth: 100
+  slimeDamage: 10
+  slimeWalkSpeed: 1
+  mustPatrol: 1
+  mustTurn: 0
+  wallCollider: {fileID: 2233913407948288863}
+  groundCheckPos: {fileID: 2233913407828624475}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  potencyBurst: {fileID: 8720471837675972744, guid: ed081c54d46bc0e49a232f77143ce028, type: 3}
 --- !u!95 &2233913407948288803
 Animator:
   serializedVersion: 4
@@ -593,30 +620,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.021516323, y: 0.35443196}
   m_EdgeRadius: 0
---- !u!114 &5784004274798907706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2233913407948288862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e9c68aaee011948860bfa73e2a2011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slimeSO: {fileID: 11400000, guid: 09509c2d8a7565f4c9c18f161ed67eba, type: 2}
-  slimeHealth: 100
-  slimeDamage: 10
-  slimeWalkSpeed: 1
-  mustPatrol: 1
-  mustTurn: 0
-  wallCollider: {fileID: 2233913407948288863}
-  groundCheckPos: {fileID: 2233913407828624475}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  potencyBurst: {fileID: 8720471837675972744, guid: ed081c54d46bc0e49a232f77143ce028, type: 3}
