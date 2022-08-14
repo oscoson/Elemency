@@ -100,6 +100,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1206,7 +1218,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Cave ROck Background Sprite Sheet_24: -1705073147
+      New Cave ROck Background Sprite Sheet_38: 1137137008
       New Cave ROck Background Sprite Sheet_18: -1237305218
       New Cave ROck Background Sprite Sheet_33: -1153310354
       New Cave ROck Background Sprite Sheet_43: 1320032822
@@ -1256,8 +1268,8 @@ TextureImporter:
       New Cave ROck Background Sprite Sheet_4: -47532725
       New Cave ROck Background Sprite Sheet_21: 193683346
       New Cave ROck Background Sprite Sheet_45: -1724602030
+      New Cave ROck Background Sprite Sheet_24: -1705073147
       New Cave ROck Background Sprite Sheet_46: 481754419
-      New Cave ROck Background Sprite Sheet_38: 1137137008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
