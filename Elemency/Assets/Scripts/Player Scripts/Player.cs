@@ -38,11 +38,13 @@ public class Player : MonoBehaviour
     private Animator playerAnimator;
 
     [Header("Misc")]
+    private ShockwaveListener shaker;
     private MagicIconSwitch iconSwitch;
 
 
     private void Awake()
     {
+        shaker = FindObjectOfType<ShockwaveListener>();
         playerInputController = GetComponent<PlayerInput>();
     }
     void Start()
@@ -178,6 +180,7 @@ public class Player : MonoBehaviour
 
     void takeDamage(float damage)
     {
+        shaker.Shake();
         playerHealth -= damage;
         if (playerHealth <= 0)
         {
