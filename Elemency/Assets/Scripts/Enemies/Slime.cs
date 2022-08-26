@@ -25,6 +25,7 @@ public class Slime : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] private ParticleSystem potencyBurst;
+    [SerializeField] private ParticleSystem deathEffect;
 
     private void Start()
     {
@@ -75,6 +76,7 @@ public class Slime : MonoBehaviour
         if(slimeHealth <= 0)
         {
             Instantiate(potencyBurst, transform.position, Quaternion.identity);
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

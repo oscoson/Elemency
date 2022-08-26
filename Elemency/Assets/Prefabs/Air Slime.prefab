@@ -537,6 +537,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   potencyBurst: {fileID: 8720471837675972744, guid: ed081c54d46bc0e49a232f77143ce028, type: 3}
+  deathEffect: {fileID: 422808763092705940, guid: fb0c2f0a092d67c4c933e4d0dcc9648b, type: 3}
 --- !u!95 &4594192777620493856
 Animator:
   serializedVersion: 4
