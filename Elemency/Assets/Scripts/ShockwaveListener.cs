@@ -20,6 +20,7 @@ public class ShockwaveListener : MonoBehaviour
 
     public void Shake()
     {
+        Debug.Log("Shake");
         source.GenerateImpulse();
     }
 }
