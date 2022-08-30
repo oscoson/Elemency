@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDeath()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 }

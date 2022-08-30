@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Area.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Room.unity
+    guid: a2ad3086fc5eae74aafe0bf5d167dd49
+  - enabled: 1
+    path: Assets/Scenes/Mob Room 1 V2.unity
+    guid: 8080505ecbe774a7ebb434d68561e707
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9981a2f663c251049b573787596043dc, type: 2}
