@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1251183446998876849}
   - component: {fileID: 1251183446998876848}
   - component: {fileID: 1251183446998876863}
+  - component: {fileID: 954126533}
   m_Layer: 0
   m_Name: Shake Controller
   m_TagString: Untagged
@@ -160,5 +161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d044d116372df2e4493737940d0efb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &954126533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251183446998876862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e16b91aae8cc24b98fab09a35a5e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
