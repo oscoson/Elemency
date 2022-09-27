@@ -52,7 +52,7 @@ public class Slime : MonoBehaviour
             mustTurn = !(Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer));
         }
     }
-    
+
     private void Patrol()
     {
         if (mustTurn || wallCollider.IsTouchingLayers(groundLayer) || wallCollider.IsTouchingLayers(enemyLayer))
@@ -73,7 +73,7 @@ public class Slime : MonoBehaviour
     private void takeDamage(float damage)
     {
         slimeHealth -= damage;
-        if(slimeHealth <= 0)
+        if (slimeHealth <= 0)
         {
             Instantiate(potencyBurst, transform.position, Quaternion.identity);
             Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -83,10 +83,10 @@ public class Slime : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         GameObject collisionObject = other.gameObject;
-        switch(collisionObject.tag)
+        switch (collisionObject.tag)
         {
             case "FireMagic":
-                switch(slimeSO.slimeType)
+                switch (slimeSO.slimeType)
                 {
                     case "FireSlime":
                         takeDamage(player.magicPower * 0.5f);
@@ -102,7 +102,7 @@ public class Slime : MonoBehaviour
                 break;
 
             case "WaterMagic":
-                switch(slimeSO.slimeType)
+                switch (slimeSO.slimeType)
                 {
                     case "FireSlime":
                         takeDamage(player.magicPower * 1.5f);
@@ -116,9 +116,9 @@ public class Slime : MonoBehaviour
                         break;
                 }
                 break;
-            
+
             case "AirMagic":
-                switch(slimeSO.slimeType)
+                switch (slimeSO.slimeType)
                 {
                     case "FireSlime":
                         takeDamage(player.magicPower * 0.25f);
@@ -135,6 +135,62 @@ public class Slime : MonoBehaviour
         }
 
 
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        GameObject collisionObject = other.gameObject;
+        
+        switch (collisionObject.tag)
+        {
+            case "FireMagic":
+                switch (slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
+
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+                }
+                break;
+
+            case "WaterMagic":
+                switch (slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+                }
+                break;
+
+            case "AirMagic":
+                switch (slimeSO.slimeType)
+                {
+                    case "FireSlime":
+                        takeDamage(player.magicPower * 0.25f);
+                        break;
+
+                    case "WaterSlime":
+                        takeDamage(player.magicPower * 1.5f);
+                        break;
+                    case "AirSlime":
+                        takeDamage(player.magicPower * 0.5f);
+                        break;
+                }
+                break;
+        }
     }
 
 
