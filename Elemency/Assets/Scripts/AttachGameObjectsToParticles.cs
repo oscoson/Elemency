@@ -32,7 +32,7 @@ public class AttachGameObjectsToParticles : MonoBehaviour
         bool worldSpace = (m_ParticleSystem.main.simulationSpace == ParticleSystemSimulationSpace.World);
         for (int i = 0; i < m_Instances.Count; i++)
         {
-            m_Instances[i].transform.localScale = new Vector3(m_Particles[i].startSize, m_Particles[i].startSize, m_Particles[i].startSize);
+            //m_Instances[i].transform.localScale = new Vector3(m_Particles[i].startSize, m_Particles[i].startSize, m_Particles[i].startSize);
             if (i < count)
             {
                 if (worldSpace)
