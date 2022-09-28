@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3940416815184927990}
   - component: {fileID: 3940416815184927993}
   - component: {fileID: 215747736301220885}
+  - component: {fileID: 1510379639}
   m_Layer: 9
   m_Name: Air Elemental Explosion
   m_TagString: AirMagic
@@ -4834,9 +4835,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940416815184927989}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5eb92017ab47be747a970974c6112872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 5
+--- !u!114 &1510379639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3940416815184927989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a060e3add959946b6c804b1466ffd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Prefab: {fileID: 7095901156320847976, guid: a505f038e6d1b8044b4bca78d3891dba, type: 3}
   destroyTime: 5
