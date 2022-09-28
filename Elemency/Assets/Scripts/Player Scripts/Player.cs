@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [Header("Magic")]
     public float magicPower = 40f;
     [SerializeField] private GameObject[] elementalBalls = new GameObject[4];
+    [SerializeField] private GameObject[] explosionMagic = new GameObject[4];
     public int currentMagicIndex = 0;
     public int potencyAmount;
 
@@ -107,6 +108,14 @@ public class Player : MonoBehaviour
         Instantiate(elementalBalls[currentMagicIndex], magicSpawn.position, transform.rotation);
         StartCoroutine(bulletFireRate(playerFireRate));
 
+    }
+
+    void OnMagic(InputValue value)
+    {
+        if (Keyboard.current[Key.E].isPressed)
+        {
+            Instantiate(explosionMagic[currentMagicIndex], transform.position, Quaternion.identity);
+        }
     }
 
     void OnMove(InputValue value)
