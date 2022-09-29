@@ -39,7 +39,6 @@ public class AttachGameObjectsToParticles : MonoBehaviour
                     m_Instances[i].transform.position = m_Particles[i].position;
                 else
                     m_Instances[i].transform.localPosition = m_Particles[i].position;
-                Debug.Log("test");
                 m_Instances[i].SetActive(true);
             }
             else
