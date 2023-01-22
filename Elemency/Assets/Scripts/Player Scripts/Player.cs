@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     private Animator playerAnimator;
 
     [Header("Misc")]
+    public ParticleSystem dustTrail;
     private ShockwaveListener shaker;
     private MagicIconSwitch iconSwitch;
 
@@ -85,6 +86,10 @@ public class Player : MonoBehaviour
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+            if(playerHasHorizontalSpeed)
+            {
+                CreateDust();
+            }
         }
 
     }
@@ -141,6 +146,11 @@ public class Player : MonoBehaviour
             playerRB.velocity += new Vector2(0f, playerJumpSpeed);
 
         }
+    }
+
+    void CreateDust()
+    {
+        dustTrail.Play();
     }
 
     void OnChangeMagic(InputValue index)
@@ -255,7 +265,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitTime);
         invincibility = false;
     }
-    
+
     private IEnumerator bulletFireRate(float waitTime)
     {
         canFire = false;
