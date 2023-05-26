@@ -98,11 +98,22 @@ public class Player : MonoBehaviour
     {
         if(Keyboard.current[Key.A].isPressed)
         {
+
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            dustTrail.transform.rotation = Quaternion.Euler(0, -dustTrail.transform.rotation.y, 0);
         }
         else if(Keyboard.current[Key.D].isPressed)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            if (dustTrail.transform.rotation.y < 0)
+            {
+                dustTrail.transform.rotation = Quaternion.Euler(0, -dustTrail.transform.rotation.y, 0);
+            }
+            else
+            {
+                dustTrail.transform.rotation = Quaternion.Euler(0, dustTrail.transform.rotation.y, 0);
+
+            }
         }
     }
 
