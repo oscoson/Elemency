@@ -96,11 +96,13 @@ public class Player : MonoBehaviour
 
     void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
-
-        if (playerHasHorizontalSpeed)
+        if(Keyboard.current[Key.A].isPressed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(playerRB.velocity.x), 1f);
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if(Keyboard.current[Key.D].isPressed)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
@@ -110,7 +112,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        Instantiate(elementalBalls[currentMagicIndex], magicSpawn.position, transform.rotation);
+        Instantiate(elementalBalls[currentMagicIndex], magicSpawn.GetChild(0).position, Quaternion.Euler (0f, 180f, 0f));
         StartCoroutine(bulletFireRate(playerFireRate));
 
     }
